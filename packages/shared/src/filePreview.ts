@@ -212,17 +212,12 @@ const MODEL_MIME_TYPES = new Set([
   "model/x.stl-ascii",
   "application/sla",
   "application/vnd.ms-pki.stl",
-  "model/3mf",
-  "application/vnd.ms-package.3dmanufacturing-3dmodel+xml",
 ]);
 
-const MODEL_MIME_TYPE_BY_EXTENSION = new Map([
-  [".stl", "model/stl"],
-  [".3mf", "model/3mf"],
-]);
+const MODEL_MIME_TYPE_BY_EXTENSION = new Map([[".stl", "model/stl"]]);
 
 export function isWorkspaceModelPreviewPath(path: string): boolean {
-  return /\.(stl|3mf)$/i.test(path);
+  return /\.stl$/i.test(path);
 }
 
 export function hostPreviewMimeTypeFromExtension(extension: string): string | null {

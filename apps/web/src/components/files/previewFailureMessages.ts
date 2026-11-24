@@ -133,6 +133,9 @@ const PREVIEW_FAILURE_MESSAGES = {
   "tiff-color-format": msg("This TIFF color format is not supported."),
   "image-decoding-unavailable": msg("Image decoding is unavailable."),
   "image-decode-failed": msg("Could not decode this image."),
+  "stl-damaged": msg("This STL file is damaged or unsupported."),
+  "stl-empty": msg("This STL file has no triangles."),
+  "stl-too-many-triangles": msg("STL previews support up to 2 million triangles."),
 } as const;
 
 export type PreviewFailureCode = keyof typeof PREVIEW_FAILURE_MESSAGES;
